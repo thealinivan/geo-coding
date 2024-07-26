@@ -1,7 +1,7 @@
 from flask import Flask
 from app.core.config import Config
 from app.api.api import api_bp
-from app.api.location.geocoding.geocode import geocode_bp
+from app.api.location.geocoding.geocode_api import geocode_bp
 
 def create_app():
     app = Flask(__name__)
