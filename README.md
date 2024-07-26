@@ -10,8 +10,10 @@ Geo-coding and reverse geo-coding API interface using Google Maps API
 - Windows: https://docs.docker.com/desktop/install/windows-install/
 - Linux: https://docs.docker.com/desktop/install/linux-install/
 
-#### 2. Populate the .env file: 
-Ask repository owners for env variables
+#### 2. Generate the .env file, then find in root and fill in your-api-keys: 
+```
+python app/utils/generate_env_file.py
+```
 
 #### 3. Build & run docker from root directory
 ```
