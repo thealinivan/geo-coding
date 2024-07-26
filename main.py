@@ -1,11 +1,13 @@
 from flask import Flask
 from app.core.config import Config
-from app.api.routes import api
+from app.api.api import api_bp
+from app.api.location.geocoding.geocode import geocode_bp
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-    app.register_blueprint(api, url_prefix='/api')
+    app.register_blueprint(api_bp, url_prefix='/api')
+    app.register_blueprint(geocode_bp, url_prefix='/api/location/geocoding')
     return app
 
 app = create_app()
