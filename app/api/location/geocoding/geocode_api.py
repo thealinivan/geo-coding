@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.services.geolocation_service import get_address_by_coordinates, get_coordinates_by_address
+from app.services.location.geocoding.geocode_service import get_address_by_coordinates, get_coordinates_by_address
 from app.core.security import require_api_key
 
 geocode_bp = Blueprint('/location/geocoding', __name__)
