@@ -9,6 +9,6 @@ services:
       - .:/app
     environment:
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
-      - DEVZ_SECRET_KEY=${SECRET_KEY}
+      - DEVZ_SECRET_KEY=${DEVZ_SECRET_KEY}
       - FLASK_ENV=development
     command: python main.py
