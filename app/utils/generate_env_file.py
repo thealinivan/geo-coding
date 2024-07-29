@@ -1,6 +1,7 @@
 api_keys = {
     'DEVZ_SECRET_KEY': 'onekeytwokeythreekeyfour',
-    'GOOGLE_API_KEY': 'your-api-key'
+    'GOOGLE_API_KEY': 'your-api-key',
+    'DOCKER_PORT': '5000'
 }
 
 def generate_env_file():
