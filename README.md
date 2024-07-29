@@ -32,9 +32,9 @@ API Key Authorization required in header (exception: test endpoint)
 #### Endpoints
 
 - http://localhost:port/api (test endpoint)
-- http://localhost:port/api/location/geocoding/geocode
-- http://localhost:port/api/location/geocoding/reverse-geocode
+- http://localhost:port/api/geocode/geocode
+- http://localhost:port/api/geocode/reverse-geocode
 
 #### Examples
--   eg. http://localhost:port/api/location/geocoding/geocode?address=Strada+Costache+Racovita+16,+Tecuci
--   eg: http://localhost:port/api/location/geocoding/reverse-geocode?lat=45.8463007&lng=27.4280217
+-   eg. http://localhost:port/api/geocode/geocode?address=Strada+Costache+Racovita+16,+Tecuci
+-   eg: http://localhost:port/api/geocode/reverse-geocode?lat=45.8463007&lng=27.4280217
