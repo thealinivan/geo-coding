@@ -1,11 +1,7 @@
 from flask import Blueprint, request, jsonify
-from app.services.location.geocoding.geocode_service import get_address_by_coordinates, get_coordinates_by_address
+from app.services.geocode_service import get_address_by_coordinates, get_coordinates_by_address
 from app.core.security import require_api_key
 
-geocode_bp = Blueprint('/location/geocoding', __name__)
-
-@geocode_bp.route('/reverse-geocode', methods=['GET'])
-@require_api_key
 def reverse_geocode():
     lat = request.args.get('lat')
     lng = request.args.get('lng')
@@ -25,8 +21,6 @@ def reverse_geocode():
     else:
         return jsonify({"error": "Unable to retrieve address"}), 500
     
-@geocode_bp.route('/geocode', methods=['GET'])
-@require_api_key
 def geocode():
     address = request.args.get('address')
     
